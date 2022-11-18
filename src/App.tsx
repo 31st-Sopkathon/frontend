@@ -1,7 +1,7 @@
 import { ThemeProvider } from 'styled-components';
 
 import Router from '../src/components/common/Router';
-import GlobalStyle from './styles/globalStyle';
+import { GlobalStyle } from './styles/globalStyle';
 import theme from './styles/theme';
 
 const App = () => {
