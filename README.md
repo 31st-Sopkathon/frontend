@@ -122,3 +122,75 @@
 |-- package.json
 |-- tsconfig.json 
 └── yarn.lock
+```
+---
+
+## 🖥 코드 컨벤션
+
+
+- 상수는 영문 대문자 스네이크 표기법 (예를 들면 키값)
+    - API_KEY
+- 컴포넌트는 대문자 `카멜 케이스`를 사용한다. (함수형 컴포넌트)
+    - MainHeader
+- 변수는 `var 사용 금지`, 그냥 const ! 안되면 let
+- rsc 나머지 함수는 화살표 함수를 이용하자
+- `암시적 반환`을 최대한 활용한다 (early return)
+- axios, async await을 이용할 때 try & catch를 이용한다
+- `구조분해할당`을 적극 이용하자
+- 변수 등을 조합해서 문자열을 생성할 때는 `무조건 리터럴`을 이용한다
+    - X) var1 + “ “ + var2
+    - O) `${var1} ${var2}`
+- switch-case 사용시 `break를 강제`하자. case문 사이들끼리는 가독성을 위해 띄어주자
+- 조건문은 `무조건 삼중 등호 연산자만` 쓰도록 하자!!  ? :
+- for는 지양하고 forEach, map을 사용
+- 주석은 쓰려고 하는 대상 바로 위에 쓰자
+단, 한 줄이면 끝에 쓰는 것도 허용. 즉, 아래에 쓰는 것은 금지한다.
+- **img태그의 alt 꼭꼭 넣어주시고, 한글로 적어주세요! `alt=”foforever웨비들짱”`**
+- button 태그에는 `type을 명시`  합시다!
+<button type=”button”>asdf</button>
+- TS
+    - 버튼, 헤더와 같이 common component에서는 `children` 적극 활용
+    
+    ```tsx
+    // 여기에 주석!
+    interface SearchBarProps{
+    }
+    
+    const SearchBar = (props : SearchBarProps) => {
+      const { a, b, c } = props;
+      ...
+    ```
+    
+    - `interface`와 `export default function 컴포넌트 선언 사이 한줄` 띄어쓰기.
+    - 컴포넌트에서 props로 전달받은 interface를 선언해줄때, `컴포넌트명+Props`로 선언하기
+- `props → hooks → 핸들러`
+- styled-componets 는 tsx 맨 아래에 선언해주자.
+- 컴포넌트 최상단에 감싸는 것은 St{컴포넌트명}Wrapper. Root Container
+- `컴포넌트 선언` 과 `처음 스타일드 컴포넌트 선언 사이 한`줄 띄어쓰기.
+- 스타일드 컴포넌트는 속성별로 개행을 해주므로 한줄 띄어쓰기 하지 않음.
+
+
+### 2️⃣ 네이밍 
+
+- `컴포넌트`,`변수명` : 동사 , 명사 중요한게 앞으로 → UserImg, DeleteBtn, useInfo
+- `함수명`  : 동사 + ~
+
+
+## 💡 브랜치 운영
+
+- **main**: 우리가 개발 최종시에 Merge를 하는 곳 ❗️
+- **feature**: 기능을 개발하면서 각자가 사용할 브랜치
+    
+    Main, Search, Search-detail,  MyPage
+    
+    ```tsx
+    $ git checkout -b feature-{기능이름}
+    ```
+    
+    ex **) feature-review -> review/2**
+    
+    ex) feature-Main → main/2
+    
+    **feature브랜치에서 header/#{이슈번호} 브랜치 생성**
+    
+    **⇒ 추가 ) main_product O ~~mainProduct~~ X 스네이크 케이스로 명명하기**
