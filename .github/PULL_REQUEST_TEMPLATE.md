@@ -1,5 +1,5 @@
 ## 🔥 Related Issues
-- close #issue_number
+close #issue_number
 
 ## 👼 작업 내용
 - [x] ~ 기능 구현
