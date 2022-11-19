@@ -8,7 +8,7 @@ const XIncorrect = () => {
   return (
     <StXIncorrect>
       <img src={XIncorrectBanner} alt="불일치" />
-      <DownloadImage src={downloadIcon}></DownloadImage>
+      <DownloadImage src={downloadIcon} alt="다운로드 아이콘"></DownloadImage>
       <h1>
         &quot;당신의 X는 당신을 <br /> 선택하지 않았습니다.&quot;
       </h1>
