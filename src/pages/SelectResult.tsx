@@ -2,8 +2,10 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
+import { ICLetterTop } from '../asset/icon';
 import XCorrectButtonImage from '../asset/image/XCorrectButtonImage.png';
 import XIncorrectButtonImage from '../asset/image/XIncorrectButtonImage.png';
+import { LetterInfo } from '../components/common';
 import { postXInformationStatus } from '../util/lib/api';
 
 const SelectResult = () => {
@@ -30,7 +32,10 @@ const SelectResult = () => {
   return (
     <StSelectResult>
       <h1>X와 만났나요?</h1>
+      <LetterInfo wantReason={''} cannotReason={''} term={'term'} />
+
       <SelectButtonContainer>
+        {/* <LetterInfo wantReason={wantReason} cannotReason={cannotReason} term={term} /> */}
         <XCorrectButton type="button" onClick={() => clickCorrectButton(introductionId)}>
           <img src={XCorrectButtonImage} alt="O 버튼" />
         </XCorrectButton>
@@ -45,11 +50,12 @@ const SelectResult = () => {
 export default SelectResult;
 
 const StSelectResult = styled.div`
-  width: 390px;
-  height: 844px;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  width: 39rem;
+  height: 84.4rem;
 
   & > h1 {
     font-family: 'S-CoreDream-3Light';
@@ -58,7 +64,7 @@ const StSelectResult = styled.div`
     line-height: 2.6rem;
     text-align: center;
 
-    margin-top: 145px;
+    margin-top: 14.5rem;
     color: #853636;
   }
 `;
@@ -66,15 +72,21 @@ const StSelectResult = styled.div`
 const SelectButtonContainer = styled.div`
   display: flex;
   flex-direction: row;
+
+  margin-top: 4.7rem;
+  button {
+    background-color: none;
+    border: none;
+  }
 `;
 const XCorrectButton = styled.button`
-  width: 162px;
-  height: 52px;
+  width: 16.2rem;
+  height: 5.2rem;
 
   margin-right: 1.6rem;
 `;
 
 const XInCorrectButton = styled.button`
-  width: 162px;
-  height: 52px;
+  width: 16.2rem;
+  height: 5.2rem;
 `;
