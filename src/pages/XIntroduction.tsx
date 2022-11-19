@@ -4,6 +4,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { ICDownloadBtn, ICLetterTop, ICNextBtn } from '../asset/icon';
+import { LetterInfo } from '../components/common';
 import { Header } from '../components/XIntroduction';
 import { XIntroductionData } from '../types';
 import { useCapture } from '../util/hooks/useCapture';
@@ -14,15 +15,15 @@ interface XIntroductionLocation {
 }
 const XIntroduction = () => {
   const navigate = useNavigate();
-  const { state } = useLocation() as XIntroductionLocation;
-  //   const state = {
-  //     userName: '서히',
-  //     category: '운동',
-  //     password: '0113',
-  //     wantReason: '우리',
-  //     cannotReason: '서핑ㅇㅇㅁㄴㅇㅁㄴㅇㅁㄴ',
-  //     term: '2022-11-19T00:00:00.000Z',
-  //   };
+  //   const { state } = useLocation() as XIntroductionLocation;
+  const state = {
+    userName: '서히',
+    category: '운동',
+    password: '0113',
+    wantReason: '우리',
+    cannotReason: '서핑ㅇㅇㅁㄴㅇㅁㄴㅇㅁㄴ',
+    term: '2022-11-19T00:00:00.000Z',
+  };
   const { wantReason, cannotReason, term } = state;
   const { snap } = useCapture();
   const captureRef = useRef<HTMLDivElement>(null);
@@ -42,16 +43,7 @@ const XIntroduction = () => {
       </aside>
       <StCaptureWrapper ref={captureRef}>
         <Header />
-        <StLetterWrapper>
-          <ICLetterTop />
-          <StLetterArticle>
-            <div className="article_wrapper">
-              <p>{wantReason}</p>
-              <p>{cannotReason}</p>
-              <p>{term}</p>
-            </div>
-          </StLetterArticle>
-        </StLetterWrapper>
+        <LetterInfo wantReason={wantReason} cannotReason={cannotReason} term={term} />
       </StCaptureWrapper>
       <StICNextBtn onClick={() => navigate('/selectResult')} />
     </StXIntroductionWrapper>
@@ -117,9 +109,6 @@ const StLetterArticle = styled.article`
     line-height: 1.7rem;
 
     color: #9e9696;
-
-    p {
-    }
   }
 `;
 
