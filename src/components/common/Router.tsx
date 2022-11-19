@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Category from '../../pages/Category';
+import CopyXInfo from '../../pages/CopyXInfo';
 import Error404 from '../../pages/Error404';
 import Login from '../../pages/Login';
 import Main from '../../pages/Main';
@@ -18,6 +19,7 @@ const Router = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/category" element={<Category />} />
         <Route path="/xinform" element={<XInform />} />
+        <Route path="/copyxinfo" element={<CopyXInfo />} />
         <Route path="/xintroduction" element={<XIntroduction />} />
         <Route path="/selectresult" element={<SelectResult />} />
         <Route path="/xcorrect" element={<XCorrect />} />
