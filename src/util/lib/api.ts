@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/order
-import { XIntroduction } from '../../types';
+import { XIntroductionData } from '../../types';
 import { reqAPI } from './index';
 
-export const postXIntroduction = async (postXIntroductionBody: XIntroduction) => {
+export const postXIntroduction = async (postXIntroductionBody: XIntroductionData) => {
   return reqAPI.post('/x-introduction', postXIntroductionBody);
 };

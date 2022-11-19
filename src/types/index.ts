@@ -1,4 +1,4 @@
-export interface XIntroduction {
+export interface XIntroductionData {
   userName: string;
   category: string;
   status: string;

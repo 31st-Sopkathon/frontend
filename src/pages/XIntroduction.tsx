@@ -3,12 +3,12 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { Header } from '../components/XIntroduction';
-import { XIntroduction } from '../types';
+import { XIntroductionData } from '../types';
 import { useCapture } from '../util/hooks/useCapture';
 import { postXIntroduction } from '../util/lib/api';
 
 interface XIntroductionLocation {
-  state: XIntroduction;
+  state: XIntroductionData;
 }
 const XIntroduction = () => {
   const navigate = useNavigate();
