@@ -136,7 +136,21 @@ export const reset = css`
 
 export const GlobalStyle = createGlobalStyle`
 ${reset}
-
+@font-face {
+     font-family: 'S-CoreDream-3Light';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+  html {
+    font-size: 62.5%;
+  }
 #root, body, html {
     width: 100%;
     height: 100vh;
