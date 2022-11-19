@@ -1,8 +1,9 @@
-export interface XIntroduction {
-    userName: string,
-    category: string,
-    status: string,
-    wantReason: string,
-    cannotReason: string,
-    term: Date
+export interface XIntroductionData {
+  userName: string;
+  category: string;
+  status?: string;
+  password: string;
+  wantReason: string;
+  cannotReason: string;
+  term: string;
 }
