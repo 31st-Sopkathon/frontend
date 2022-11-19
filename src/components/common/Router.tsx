@@ -5,6 +5,7 @@ import CopyXInfo from '../../pages/CopyXInfo';
 import Error404 from '../../pages/Error404';
 import Login from '../../pages/Login';
 import Main from '../../pages/Main';
+import ReLogin from '../../pages/ReLoigin';
 import SelectResult from '../../pages/SelectResult';
 import XCorrect from '../../pages/XCorrect';
 import XIncorrect from '../../pages/XIncorrect';
@@ -16,6 +17,7 @@ const Router = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Main />} />
+        <Route path="/relogin" element={<ReLogin />} />
         <Route path="/login" element={<Login />} />
         <Route path="/category" element={<Category />} />
         <Route path="/xinform" element={<XInform />} />
