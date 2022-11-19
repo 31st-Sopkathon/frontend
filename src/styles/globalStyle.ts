@@ -1,5 +1,6 @@
 import { createGlobalStyle, css } from 'styled-components';
 
+import background from '../asset/image/background.png';
 export const reset = css`
   html,
   body,
@@ -154,6 +155,8 @@ ${reset}
 #root, body, html {
     width: 100%;
     height: 100vh;
+
+ background: url(${background});
  
 }
 * {
