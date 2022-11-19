@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -6,8 +6,12 @@ import { IcLoginLogo } from '../../src/asset/icon';
 
 const Login = () => {
   const navigate = useNavigate();
+  const nameRef = useRef(null);
+  const passwordRef = useRef(null);
+
   const goToCategory = () => {
-    navigate('/category');
+    if (passwordMessage == '')
+      navigate('/category', { state: { userName: nameRef.current, password: passwordRef.current } });
   };
 
   const passwordCondition = /^[0-9]{4}$/;
@@ -16,21 +20,21 @@ const Login = () => {
 
   // 비밀번호 4개의 숫자 데이터 검사
   const checkPassword = (e) => {
-    console.log('비밀번호 유효성 검사 :: ', passwordCondition.test(e.target.value));
     const message = '비밀번호 네 자리를 다시 입력해주세요.';
-    passwordCondition.test(e.target.value) == false && setPasswordMessage(message);
+    passwordCondition.test(e.target.value) == false ? setPasswordMessage(message) : setPasswordMessage('');
   };
 
   return (
     <StWrapper>
       <IcLoginLogo width="205" />
       <StInput>
-        <input className="name" type="text" placeholder="이름을 입력하세요." />
+        <input className="name" type="text" placeholder="이름을 입력하세요." ref={nameRef} />
         <input
           className="password"
           type="password"
           placeholder="비밀번호 네 자리를 입력하세요."
           onBlur={checkPassword}
+          ref={passwordRef}
         />
         <StMessage>{passwordMessage}</StMessage>
       </StInput>
