@@ -34,19 +34,19 @@
     <tr align="center">
         <td>
             🌈 서히 🌈 <br/>
-            Web FE - 
+            Web FE - 나의 X결과, O결과
         </td>
         <td>
             💗 우영 💗<br />
-            Web FE
+            Web FE - O/X 선택, X결과 
         </td>
         <td>
             👼 명지 👼<br />
-            Web FE
+            Web FE - 시작, 카테고리 
         </td>
         <td>
             🌕 예원 🌕 <br />
-            Web FE
+            Web FE - 이름/비밀번호 , X 정보 입력 
         </td>
     </tr>
 </table>
