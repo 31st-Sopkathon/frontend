@@ -1,5 +1,6 @@
+import axios from 'axios';
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { ICLetterTop } from '../asset/icon';
@@ -9,33 +10,28 @@ import { LetterInfo } from '../components/common';
 import { postXInformationStatus } from '../util/lib/api';
 
 const SelectResult = () => {
-  const introductionId = 1;
-
   const navigate = useNavigate();
+  const { state } = useLocation();
+  const { wantReason, cannotReason, term, introductionId } = state;
 
   const clickCorrectButton = async (introductionId: number) => {
-    try {
-      const data = postXInformationStatus(introductionId, true);
-    } catch (error) {
-      navigate('*');
-    }
+    // const data = await axios.patch(`${process.env.REACT_APP_IP}/x-introduction/${introductionId}`, { status: true });
+    // console.log(data);
+    navigate('/xcorrect');
   };
 
   const clickInCorrectButton = async (introductionId: number) => {
-    try {
-      const data = postXInformationStatus(introductionId, false);
-    } catch (error) {
-      navigate('*');
-    }
+    // const data = await axios.patch(`${process.env.REACT_APP_IP}/x-introduction/${introductionId}`, { status: false });
+    // console.log(data);
+    navigate('/xincorrect');
   };
 
   return (
     <StSelectResult>
       <h1>X와 만났나요?</h1>
-      <LetterInfo wantReason={''} cannotReason={''} term={'term'} />
+      <LetterInfo wantReason={wantReason} cannotReason={cannotReason} term={term} />
 
       <SelectButtonContainer>
-        {/* <LetterInfo wantReason={wantReason} cannotReason={cannotReason} term={term} /> */}
         <XCorrectButton type="button" onClick={() => clickCorrectButton(introductionId)}>
           <img src={XCorrectButtonImage} alt="O 버튼" />
         </XCorrectButton>
