@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import styled, { css } from 'styled-components';
 
 import { XSelectBtn } from '../../src/asset/icon';
@@ -16,8 +16,10 @@ const Category = () => {
   const [selectedName, setSelectedName] = useState(''); // 선택된 카테고리 이름 저장위해 필요함
   // 클릭한
   const navigate = useNavigate();
+  const { state } = useLocation();
+
   const goToXInfom = () => {
-    navigate('/xinform');
+    navigate('/xinform', { state: { ...state, category: selectedName } });
   };
   return (
     <StWrap>
