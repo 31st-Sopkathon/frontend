@@ -1,36 +1,49 @@
-import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import { useRef } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
-
-//import { IcCalendar } from '../../src/asset/icon';
 
 const XInform = () => {
   const navigate = useNavigate();
-  const goToXintroduction = () => {
-    navigate('/xintroduction');
-  };
+  const { state } = useLocation();
+  const calendarRef = useRef(null);
+  const wantReasonRef = useRef(null);
+  const cannotReasonRef = useRef(null);
 
-  const questions = ['함께하고 싶은 이유', '함께하지 못한 이유'];
-  const questionList = questions.map((question, index) => (
-    <>
-      <StSubTitle>
-        X와&nbsp; <span key={index}> {question}</span>는 무엇인가요?
-      </StSubTitle>
-      <StInput>
-        <input className="name" type="text" />
-      </StInput>
-    </>
-  ));
+  const postXIntroductionData = async () => {
+    const response = await axios.post(`${process.env.REACT_APP_IP}/x-introduction`, {
+      ...state,
+      wantReason: wantReasonRef.current.value,
+      cannotReason: cannotReasonRef.current.value,
+      term: calendarRef.current.value,
+    });
+
+    navigate('/copyxinfo', { state: response.data.data.introductionId });
+  };
   return (
     <StWrapper>
       <StTitle>당신의 X를 소개해주세요.</StTitle>
-      <span>{questionList}</span>
+      <span>
+        <StSubTitle>
+          X와&nbsp; <span> 함께하고 싶은 이유</span>는 무엇인가요?
+        </StSubTitle>
+        <StInput>
+          <input className="name" type="text" ref={wantReasonRef} />
+        </StInput>
+        <StSubTitle>
+          X와&nbsp; <span> 함께하지 못한 이유</span>는 무엇인가요?
+        </StSubTitle>
+        <StInput>
+          <input className="name" type="text" ref={cannotReasonRef} />
+        </StInput>
+      </span>
       <StSubTitle>
         X를&nbsp; <span>만날 날짜</span>를 선택해주세요.
       </StSubTitle>
       <StInput>
-        <input className="date" type="date" />
+        <input className="date" type="date" ref={calendarRef} />
       </StInput>
-      <button onClick={goToXintroduction}>소개서 작성 완료</button>
+      <button onClick={postXIntroductionData}>소개서 작성 완료</button>
     </StWrapper>
   );
 };
