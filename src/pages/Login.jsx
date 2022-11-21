@@ -11,7 +11,7 @@ const Login = () => {
 
   const goToCategory = () => {
     if (passwordMessage == '')
-      navigate('/category', { state: { userName: nameRef.current, password: passwordRef.current } });
+      navigate('/category', { state: { userName: nameRef.current.value, password: passwordRef.current.value } });
   };
 
   const passwordCondition = /^[0-9]{4}$/;
