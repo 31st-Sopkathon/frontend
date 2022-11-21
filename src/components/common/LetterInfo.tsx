@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import { ICLetterTop } from '../../asset/icon';
 interface LetterInfoProps {
   wantReason: string;
-  cannotReason: string;
-  term: string;
+  cannotReason?: string;
+  term?: string;
 }
 const LetterInfo = (props: LetterInfoProps) => {
   const { wantReason, cannotReason, term } = props;
