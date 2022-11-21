@@ -30,12 +30,7 @@ const XIntroduction = () => {
 
   const handleCaptureBtn = useCallback(() => {
     snap(captureRef, { file: 'download.png' });
-    postXIntroductionData();
   }, [snap, captureRef]);
-
-  const postXIntroductionData = async () => {
-    const response = await axios.post(`${process.env.REACT_APP_IP}/x-introduction`, state);
-  };
   return (
     <StXIntroductionWrapper>
       <aside>
