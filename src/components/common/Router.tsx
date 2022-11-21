@@ -17,7 +17,7 @@ const Router = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/relogin" element={<ReLogin />} />
+        <Route path="/relogin/:id" element={<ReLogin />} />
         <Route path="/login" element={<Login />} />
         <Route path="/category" element={<Category />} />
         <Route path="/xinform" element={<XInform />} />
