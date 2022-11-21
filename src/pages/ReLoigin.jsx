@@ -1,18 +1,33 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import React, { useRef, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { IcLoginLogo } from '../../src/asset/icon';
 
+// 동적 라우팅 값으로 걸어둔 이름으로 객체를 가져
 const ReLogin = () => {
+  const { id } = useParams();
   const navigate = useNavigate();
-  const goToCategory = () => {
-    navigate('/category');
+  const goToCategory = async () => {
+    const data = await axios.post(`${process.env.REACT_APP_IP}/x-introduction/${id}`, {
+      password: String(passwordRef.current.value),
+    });
+    console.log(data.data);
+    navigate('/selectresult', {
+      state: {
+        wantReason: data.data.data.wantReason,
+        cannotReason: data.data.data.cannotReason,
+        term: data.data.data.term,
+        introductionId: id,
+      },
+    });
   };
 
   const passwordCondition = /^[0-9]{4}$/;
 
   const [passwordMessage, setPasswordMessage] = useState('');
+  const passwordRef = useRef(null);
 
   // 비밀번호 4개의 숫자 데이터 검사
   const checkPassword = (e) => {
@@ -30,6 +45,7 @@ const ReLogin = () => {
           type="password"
           placeholder="비밀번호 네 자리를 입력하세요."
           onBlur={checkPassword}
+          ref={passwordRef}
         />
         <StMessage>{passwordMessage}</StMessage>
       </StInput>
@@ -41,10 +57,13 @@ const ReLogin = () => {
 export default ReLogin;
 
 const StWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   font-family: 'S-CoreDream-3Light';
   width: 39rem;
-  height: 84.4rem;
-  background-color: #ffeff1;
   margin: auto;
   padding-top: 20.5rem;
   text-align: center;
@@ -57,7 +76,6 @@ const StWrapper = styled.div`
     font-size: 2.2rem;
     font-weight: 500;
     border-radius: 10rem;
-    background: #ffffff;
     cursor: pointer;
   }
 `;
