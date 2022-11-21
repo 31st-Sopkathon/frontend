@@ -1,16 +1,60 @@
-#  나의 X 소개서
-> 내가 해보고 싶었지만 아직 해보지 못했던 활동 ‘X’에 대한 목표를 세우고 달성하게 도와주는 서비스
+<div align="center">
 
-##  가치제안
-> 고객은 그동안 못 해봤던 활동들에 대해 소개하면서 목표를 세운다면 도전의 동기부여를 얻을 수 있을 것이다.
+ <img width="1000" alt="image" src="https://user-images.githubusercontent.com/79238676/202936054-f7d50867-921a-4984-abed-e9e2b6231f89.png"/>
+  <h2> 아직 해보지 못했던 활동 ‘X’에 대한 목표를 세우고 달성하게 도와주는 나의 ❌ 소개서 </h2>
+</div>
 
-##  문제정의 
-> 고객은 그동안 못 해봤던 활동들을 그동안 도전하지 못한 똑같은 이유로 도전하기 어려울 것이다.
 
-## 타겟정의 
-> 하고 싶었지만 해보지 못한 활동들을 부담 없이 달성해보고 공유를 통해 성취감을 느끼고 싶은 사람
-20대 / SNS를 즐겨 사용함 / 도전을 즐기지만 시간이 많이 없는 or 도전을 망설여하는 사람 / 자신의 도전에 대한 성과를 다른 사람들에게 공유하고 싶은 사람)
 
+ <h2>  💡 가치 제안  💡 </h2>
+ <div align="center">
+ <img width="800" alt="image" src="https://user-images.githubusercontent.com/79238676/202936230-abbf9c7a-3d5b-4e64-8f7c-620aee8b5fa1.png"/>
+ </div>
+ 
+ <h3> 🤔 문제 </h3>
+ <div> 고객은 그동안 못 해봤던 활동들을 그동안 도전하지 못한 똑같은 이유로 도전하기 어려울 것이다. </div>
+
+
+ <h3> ✨ 타겟 </h3>
+ <div> 하고 싶었지만 해보지 못한 활동들을 부담 없이 달성해보고 공유를 통해 성취감을 느끼고 싶은 사람 </div>
+ <div> 👉 20대 / SNS를 즐겨 사용함 / 도전을 즐기지만 시간이 많이 없는 or 도전을 망설여하는 사람 / 자신의 도전에 대한 성과를 다른 사람들에게 공유하고 싶은 사람 </div>
+
+---
+
+<h2> 💗 나의 X 소개서의 핵심 기능 </h2>
+
+<h3> 1️⃣ 이름 입력 / X 선택 </h3>
+<div ><strong>이름과 비밀번호로 나의 X소개서의 정보를 설정하고, 원하는 카테고리를 선택합니다.</strong> <br/>
+운동, 액티비티, 취미, 성장/자기계발, 문화/예술, 페스티벌, 여행 총 7가지로 나뉘어집니다 </div>
+
+![image](https://user-images.githubusercontent.com/79238676/202936932-b03482de-7af1-4c1e-b8ce-4af9a0809295.png)
+
+<h3> 2️⃣ X 소개서 작성 </h3>
+<div ><strong>그 X를 하고 싶은 이유, 지금까지 못했던 이유, X와 만날 날짜</strong>
+3가지의 질문을 받아 X 소개서를 작성합니다. </div>
+
+![image](https://user-images.githubusercontent.com/79238676/202936982-373e5165-9832-49f8-a0e5-27eecbacfb2d.png)
+
+
+<h3> 3️⃣ X 소개서 저장 </h3>
+<div ><strong> 완성된 X 소개서를 이미지로 저장하게 합니다.</strong> <br/>
+저장 크기는 인스타그램 스토리 사이즈로 제작합니다.  </div>
+
+![image](https://user-images.githubusercontent.com/79238676/202937178-3564afa5-6d24-4ad1-9dc5-fb29c3284aaa.png)
+
+<h3> 4️⃣ X -> O 변화 확인 </h3>
+<div >  👉 <strong> 설정 기간 내 O/X를 선택하고, 기간 후에는 X 만 선택 가능합니다.</strong> <br/>
+나의 X 소개서의 고유 url로 접속해 비밀번호로 입력하여 결과 확인이 가능합니다. </div>
+  
+![image](https://user-images.githubusercontent.com/79238676/202937797-8b422c98-2ead-4d95-9684-e703768ed7d4.png)
+
+👇 아래는 결과 화면 2가지 입니다. 
+
+![image](https://user-images.githubusercontent.com/79238676/202937805-68b1f770-9e4e-4c5c-aa35-0adfdcffb548.png)
+
+![image](https://user-images.githubusercontent.com/79238676/202937807-81b1b8ae-6636-4277-b208-2677d64e78b8.png)
+
+	
 
 ## 🧑🏻‍💻 웹소개서
 
@@ -67,7 +111,7 @@
 
 
 ## ⚒️ 기술 스택 
-```
+```ts
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "@types/react-router-dom": "^5.3.3",
@@ -84,7 +128,7 @@
 ```
 
 ## 라이브러리
-```
+```ts
 import { useCapture } from 'react-capture' // 스크린 캡쳐 라이브러리
 ```
 
@@ -201,19 +245,59 @@ import { useCapture } from 'react-capture' // 스크린 캡쳐 라이브러리
     
     **⇒ 추가 ) main_product O ~~mainProduct~~ X 스네이크 케이스로 명명하기**
     
-## 에러 해결 과정 
-명지: 카테고리 별 선택 및 CSS 변경 에러 해결
-useState()를 사용해서 선택된 카테고리 이름 저장하고, isactive => props를 통해 선택된 카테고리 이름과 카테고리 이름이 같으면 스타일 변경하도록 했다. 스타일에 props를 받아 클릭했을때 지정한 스타일로 바로 변하도록 했다. 
+## ❤️‍🔥 에러 해결 과정 
+<table>
+   <tr align="center">
+        <td width="50%">
+            🌈 서히 🌈 <br/>
+        </td>
+        <td>
+            💗 우영 💗
+        </td>
+    </tr>
+    <tr align="center">
+        <td>
+            <ol> 
+	<li>  서버 연결 과정 중 GET과 POST 명세서에 내용이 정확치 않아서 연결하는데 오랜 시간이 걸렸다. </li> 
+	<li> GET으로 통신해야하는 부분을 POST로 적어 놔서 계속 작은 에러를 잡지 못했던 것같다. </li>
+	<li> 하지만 서버와의 침착한 소통으로 에러 부분을 파악했고 문제를 원만히 해결할 수 있었다. </li>
+	   </div>
+        </td>
+        <td>
+	<ol> 
+	<li> svg는 ts에서 ReactComponent로 export 해주어야하고 png는 export default로 export 적용해야한다. </li>
+	<li> 이슈를 어떻게 나눌 것인가에 대해서는 이슈를 나누면 각 작업을 시작하기 전 기능을 구체화할 수 있다는 장점이 있지만 이슈로 기록을 남긴다고 하면 커밋,pr으로도 기록을 남길 수 있기에  </li> 
+	<li> 단순히 기록을 위한 이슈 발급이 아니라 의미있는 이슈를 발급하기 위해 어떤 기준(기간, 기능 등)으로 이슈를 나눌 것인가에 대해 사전에 개인, 팀별로 합의를 해야한다. </li>
+        </td>
+    </tr>
+</table>
 
 
-예원: log로 결과값을 띄우고 나서 어떻게 윈도우 창에 띄워야할지 고민 -> usestate이용 -> const 외부에 작성하며 오류가 발생하였다 -> 선언 후 return 이전으로 이동 
+<table>
+   <tr align="center">
+        <td width="50%">
+            👼 명지 👼
+        </td>
+        <td>
+            🌕 예원 🌕 
+        </td>
+    </tr>
+    <tr align="center">
+        <td>
+	<ol> 
+	<li> 카테고리 별 선택 및 CSS 변경 에러 해결 </li>
+	<li> useState()를 사용해서 선택된 카테고리 이름 저장하고, isactive => props를 통해 선택된 카테고리 이름과 카테고리 이름이 같으면 스타일 변경하도록 했다.  </li> 
+	<li> 스타일에 props를 받아 클릭했을때 지정한 스타일로 바로 변하도록 했다. </li>
+        </td>
+        <td>
+	<ol> 
+         <li>  log로 결과값을 띄우고 나서 어떻게 윈도우 창에 띄워야할지 고민 -> usestate이용 -> const 외부에 작성하며 오류가 발생하였다 -> 선언 후 return 이전으로 이동 </li>
+	   
+<li> 비슷한 코드가 반복되는 문제 -> 다른 요소만 배열로 정리하고 map으로 묶어 반복함. 함수 내부 작성 시에도 가장 상위 루트로 하나를 감싸는 작업이 필요함.</li>
+<li> 버튼 클릭시 타 링크 이동 문제 -> useNavigate import 및 onclick이벤트로 연결 </li> </div>
+        </td>
+    </tr>
+</table>
 
 
-- 비슷한 코드가 반복되는 문제 -> 다른 요소만 배열로 정리하고 map으로 묶어 반복함. 함수 내부 작성 시에도 가장 상위 루트로 하나를 감싸는 작업이 필요함.
-- 버튼 클릭시 타 링크 이동 문제 -> useNavigate import 및 onclick이벤트로 연결
-
-우영: svg는 ts에서 ReactComponent로 export 해주어야하고 png는 export default로 export 적용해야한다.
-이슈를 어떻게 나눌 것인가에 대해서는 이슈를 나누면 각 작업을 시작하기 전 기능을 구체화할 수 있다는 장점이 있지만 이슈로 기록을 남긴다고 하면 커밋,pr으로도 기록을 남길 수 있기에 단순히 기록을 위한 이슈 발급이 아니라 의미있는 이슈를 발급하기 위해 어떤 기준(기간, 기능 등)으로 이슈를 나눌 것인가에 대해 사전에 개인, 팀별로 합의를 해야한다.
-
-서희: 서버 연결 과정 중 GET과 POST 명세서에 내용이 정확치 않아서 연결하는데 오랜 시간이 걸렸다. GET으로 통신해야하는 부분을 POST로 적어 놔서 계속 작은 에러를 잡지 못했던 것같다. 하지만 서버와의 침착한 소통으로 에러 부분을 파악했고 문제를 원만히 해결할 수 있었다. 
 
